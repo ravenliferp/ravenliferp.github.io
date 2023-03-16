@@ -85,19 +85,19 @@ firstStepVerification = () => {
     console.log(discord, email, dob, year, disponibility)
 
     if (discord == "no")
-        return alert("LSDream\nVeuillez renseigner votre pseudo discord");
+        return alert("RavenLife\nVeuillez renseigner votre pseudo discord");
 
     if (!checkMail(email))
-        return alert("LSDream\nVeuillez renseigner une adresse mail dans le bon format")
+        return alert("RavenLife\nVeuillez renseigner une adresse mail dans le bon format")
 
     if (dob == "no" || dob == "2002-09-02")
-        return alert("LSDream\nVeuillez renseigner votre Date de Naissance");
+        return alert("RavenLife\nVeuillez renseigner votre Date de Naissance");
 
     if (year == "no")
-        return alert("LSDream\nVeuillez renseigner votre Age");
+        return alert("RavenLife\nVeuillez renseigner votre Age");
 
     if (disponibility == "no" || disponibility == "Disponibilité") {
-        return alert("LSDream\nVeuillez renseigner vos Disponibilité");
+        return alert("RavenLife\nVeuillez renseigner vos Disponibilité");
     }
 
     // forms.discord = discord;
@@ -112,7 +112,7 @@ firstStepVerification = () => {
     webStorage({type: "set", name: "year", value: year})
     webStorage({type: "set", name: "disponibility", value: disponibility})
 
-    alert("LSDream\nVous avez réussi.\nVous allez être redirigé vers la dernière étape de la douane");
+    alert("RavenLife\nVous avez réussi.\nVous allez être redirigé vers la dernière étape de la douane");
     window.location.replace("twoStepForms.html");
 }
 
@@ -125,23 +125,23 @@ twoStepVerification = () => {
     const RPBackground = document.getElementById("backgroundRP").value || "no";
 
     if (hourgame == "no")
-        return alert("LSDream\nVeuillez renseigner vos Heure de Jeu sur FiveM");
+        return alert("RavenLife\nVeuillez renseigner vos Heure de Jeu sur FiveM");
 
     if (servergame == "no")
-        return alert("LSDream\nVeuillez renseigner les serveur sur lesquels vous avez joué")
+        return alert("RavenLife\nVeuillez renseigner les serveur sur lesquels vous avez joué")
 
     if (nameRP == "no")
-        return alert("LSDream\nVeuillez renseigner votre Prénom et Nom RP");
+        return alert("RavenLife\nVeuillez renseigner votre Prénom et Nom RP");
 
     if (dobRP == "no")
-        return alert("LSDream\nVeuillez renseigner votre date de naissance RP");
+        return alert("RavenLife\nVeuillez renseigner votre date de naissance RP");
 
     if (typeRP == "no") {
-        return alert("LSDream\nVeuillez renseigner le type de RP que vous souhaitez faire");
+        return alert("RavenLife\nVeuillez renseigner le type de RP que vous souhaitez faire");
     }
 
     if (RPBackground == "no")
-        return alert("LSDream\nVeuillez renseigner le lien de de votre background (Histoire de votre personnage)");
+        return alert("RavenLife\nVeuillez renseigner le lien de de votre background (Histoire de votre personnage)");
     
     forms.hourgame = hourgame;
     forms.servergame = servergame;
@@ -165,7 +165,7 @@ twoStepVerification = () => {
                 "color": 16546565,
                 "author": {
                     "name": "RavenLife",
-                    "url": "",
+                    "url": "https://ravenliferp.github.io",
                     "icon_url": "https://cdn.discordapp.com/attachments/822135702573154324/915461372005986325/Logo_Los_Santos_Dream_v1.png"
                   },
                   "footer": {
@@ -178,7 +178,7 @@ twoStepVerification = () => {
               }
             ]
         })
-        alert("LSDream\nVous avez envoyé le formulaire a la douane de LSDream.\nUne réponse vous sera apportez par un douanier sur l'application discord");
+        alert("RavenLife\nVous avez envoyé le formulaire a la douane de RavenLife.\nUne réponse vous sera apportez par un douanier sur l'application discord");
         window.location.replace("../main.html");
     }, 500)
 }
